@@ -1,16 +1,26 @@
 backend:
-  name: MiquelAlvarez/AccountAble
+  name: github
+  repo: MiquelAlvarez/AccountAble
 
 media_folder: static/assets
-public_folder: assets
+public_folder: public
 
 collections:
-  - name: accountable
-    label: Accountable
-    folder: accountable
+  - name: todos
+    label: todos
+    label_singular: todo
+    folder: todos
     create: true
     fields:
-     - { name: path, label: Path }
      - { name: date, label: Date, widget: date }
-     - { name: title, label: Title }
-     - { name: body, label: Body, widget: markdown }
+     - { name: title, label: Title, widget: string }
+     - { name: done, label: Done, widget: boolean }
+  - name: books
+    label: books
+    label_singular: book
+    folder: books
+    create: true
+    fields:
+      - { name: title, label: Title, widget: string }
+      - { name: topic, label: Topic, widget: select, options: ['design', 'ba', 'tech', 'productivity', 'creativity'] }
+      

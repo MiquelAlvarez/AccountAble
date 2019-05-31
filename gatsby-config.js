@@ -7,6 +7,7 @@ module.exports = {
   plugins: [
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-netlify-cms`,
+    `gatsby-remark-source-name`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -18,14 +19,14 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `books`,
-        path: `${__dirname}/books/`,
+        path: `${__dirname}/books`,
       },
     },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `todos`,
-        path: `${__dirname}/todos/`,
+        path: `${__dirname}/todos`,
       },
     },
     `gatsby-transformer-remark`,

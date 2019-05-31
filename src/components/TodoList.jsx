@@ -1,13 +1,34 @@
 import React, { useState } from 'react';
+import { useStaticQuery, graphql } from 'gatsby'; 
 
-const TodoList = () => {
-    return (
+
+
+export default ({children}) => {
+  const data = useStaticQuery(
+    graphql`
+    query Books {
+      allMarkdownRemark(filter: {collection: {eq: "todos"}}) {
+    edges {
+      node {
+        id
+        frontmatter {
+          date
+          title
+        }
+      }
+    }
+  }
+}
+  `)
+  console.log(data)
+  return (
         <div className='todoList'>
-            <li>Uno</li>
+        {data.allMarkdownRemark.edges.map(({ node }, index) => (
+          <li key={index}>{node.frontmatter.title}</li>
+        ))}
+            <li></li>
             <li>Dos</li>
             <li>Tres</li>
         </div>
-    )
-};
-
-export default TodoList;
+  )
+}

@@ -6,7 +6,7 @@ import { useStaticQuery, graphql } from 'gatsby';
 export default ({children}) => {
   const data = useStaticQuery(
     graphql`
-    query Books {
+    query Todos {
       allMarkdownRemark(filter: {collection: {eq: "todos"}}) {
     edges {
       node {
@@ -14,6 +14,7 @@ export default ({children}) => {
         frontmatter {
           date
           title
+          done
         }
       }
     }
@@ -23,12 +24,13 @@ export default ({children}) => {
   console.log(data)
   return (
         <div className='todoList'>
-        {data.allMarkdownRemark.edges.map(({ node }, index) => (
-          <li key={index}>{node.frontmatter.title}</li>
-        ))}
-            <li></li>
-            <li>Dos</li>
-            <li>Tres</li>
+          <h2>Todos</h2>
+          {data.allMarkdownRemark.edges.map(({ node }, index) => (
+            <li key={index}>
+              <input type='checkbox' disabled defaultChecked={node.frontmatter.done}/>
+              {node.frontmatter.title}
+            </li>
+          ))}
         </div>
   )
 }

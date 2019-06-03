@@ -12,11 +12,12 @@ const Header = ({ siteTitle }) => (
     <div
       style={{
         margin: `0 auto`,
-        maxWidth: 960,
-        padding: `1.45rem 1.0875rem`,
+        padding: `0.2em`,
       }}
     >
-      <h1 style={{ margin: 0 }}>
+      <h1 style={{ 
+        margin: 0,
+        fontSize: '0.7em' }}>
         <Link
           to="/"
           style={{
@@ -27,6 +28,8 @@ const Header = ({ siteTitle }) => (
           {siteTitle} / <small>being completely responsible for what I do.</small>
         </Link>
       </h1>
+      <Link to='/todo/'>Todo List</Link>
+      <Link to='/books/'>Books List</Link>
     </div>
   </header>
 )

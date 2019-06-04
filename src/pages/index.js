@@ -1,5 +1,5 @@
-import React from "react"
-import { useStaticQuery, graphql } from 'gatsby'; 
+import React, { useState } from "react"
+import { graphql } from 'gatsby'; 
 
 // import { Link } from "gatsby"
 
@@ -43,12 +43,16 @@ export const query =   graphql`
 }
 `;
 
-export default ({data}) => (
-    <Layout>
-      <SEO title="Home" />  
-      {/* <TodosLength /> */}
-      <TodoList data={data.todos}/>
-      <BooksList data={data.books}/>
-      <GoalsList/>
-    </Layout>
-  )
+export default ({ data }) => {
+  const [info, setData] = useState(data);
+  console.log(info)
+  return (
+    < Layout >
+    <SEO title="Home" />
+    <TodosLength data={info.todos} />
+    <TodoList data={info.todos} />
+    <BooksList data={info.books} />
+    <GoalsList />
+    </Layout >
+    )
+}

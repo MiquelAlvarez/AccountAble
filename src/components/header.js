@@ -2,7 +2,7 @@ import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
 import { FiCheckCircle } from 'react-icons/fi'
-import { FiHeadphones } from 'react-icons/fi'
+// import { FiHeadphones } from 'react-icons/fi'
 import { FiBook } from 'react-icons/fi'
 import { FiLifeBuoy } from 'react-icons/fi'
 import "../styles/header.scss"

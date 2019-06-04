@@ -8,7 +8,8 @@ import Layout from '../components/layout'
 
 import TodoList from '../components/todoList';
 
-const TodoPage = () => {
+const TodoPage = ({ data }) => {
+    console.log('this is todolist', {data})
     return (
         <div>
             <Helmet>
@@ -17,7 +18,7 @@ const TodoPage = () => {
             <Layout>
                 <SEO title='todos'/>
                 <div className='todoList'>
-                    <TodoList />
+                    <TodoList data={data} />
                 </div>
             </Layout>
         </div>

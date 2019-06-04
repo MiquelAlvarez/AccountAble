@@ -30,6 +30,13 @@ module.exports = {
         path: `${__dirname}/todos`,
       },
     },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `goals`,
+        path: `${__dirname}/goals`,
+      },
+    },
     `gatsby-transformer-remark`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,

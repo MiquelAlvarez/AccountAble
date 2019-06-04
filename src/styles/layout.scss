@@ -1,0 +1,40 @@
+.content {
+  position: relative;
+  margin-left:80px;
+  width:auto;
+  height: 100vh;
+  display: flex;
+  flex-direction:column;
+  justify-content: flex-start;
+}
+
+.section-content {
+  display: flex;
+  flex-direction: row;
+
+
+  .section-brief {
+    padding: 1em 0;
+    width: 45vw;
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+    justify-content: space-between;
+
+    .section-title {
+      justify-self: flex-start;
+    }
+  }
+  .section-items {
+    width:40vw;
+    padding: 2em;
+    height: auto;
+    margin-left: auto;
+    overflow-y: scroll;
+    background-color: whitesmoke;
+
+    li {
+      width: 100%;
+    }
+  }
+}

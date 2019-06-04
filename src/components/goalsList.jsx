@@ -8,17 +8,17 @@ export default ({children}) => {
     graphql`
     query Goals {
       allMarkdownRemark(filter: {collection: {eq: "goals"}}) {
-    edges {
-      node {
-        id
-        frontmatter {
-          title
-          done
+        edges {
+          node {
+            id
+            frontmatter {
+              title
+              done
+            }
+          }
         }
       }
     }
-  }
-}
   `)
   console.log(data)
   return (

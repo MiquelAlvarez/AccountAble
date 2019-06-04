@@ -3,8 +3,8 @@ import { Helmet } from 'react-helmet';
 
 import SEO from "../components/seo"
 import Layout from '../components/layout'
-import { Link } from "gatsby"
-import styles from '../styles/todos.scss';
+// import { Link } from "gatsby"
+// import styles from '../styles/todos.scss';
 
 import TodoList from '../components/todoList';
 

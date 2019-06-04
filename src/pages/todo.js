@@ -6,7 +6,7 @@ import Layout from '../components/layout'
 import { Link } from "gatsby"
 import styles from '../styles/todos.scss';
 
-import TodoList from '../components/TodoList';
+import TodoList from '../components/todoList';
 
 const TodoPage = () => {
     return (

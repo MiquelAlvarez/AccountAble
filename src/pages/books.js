@@ -6,7 +6,7 @@ import Layout from '../components/layout'
 import { Link } from "gatsby"
 import styles from '../styles/books.scss';
 
-import BooksList from '../components/BooksList';
+import BooksList from '../components/booksList';
 
 const BooksPage = () => {
     return (

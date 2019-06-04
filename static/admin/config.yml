@@ -28,11 +28,12 @@ collections:
       - { name: description , label: Description, widget: text }
       - { name: read, label: Read, widget: boolean, default: false, required: false }
       - { name: Goal, label: Goal, widget: relation, collection: goals, searchFields: [goal], valueField: goal, displayFields: [Goal]}
+  
   - name: goals
     label: goals
     label_singular: goal
     folder: goals
     create: true
     fields: 
-      - { name: goal, label: Goal, widget: string }
-      - { name: completed, label: Completed, widget: boolean, default: false, required: false }
+      - { name: title, label: Goal, widget: string }
+      - { name: done, label: Completed, widget: boolean, default: false, required: false }

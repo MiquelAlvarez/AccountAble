@@ -12,8 +12,7 @@ import GoalsList from '../components/goalsList'
 import SEO from "../components/seo"
 import '../styles/main.scss'
 
-
-export const query =   graphql`
+export const data =   graphql`
 {
   todos: allMarkdownRemark(filter: {collection: {eq: "todos"}}) {
      edges {
@@ -36,6 +35,7 @@ export const query =   graphql`
            date
            title
            done
+           topic
          }
        }
      }
@@ -45,11 +45,10 @@ export const query =   graphql`
 
 export default ({ data }) => {
   const [info, setData] = useState(data);
-  console.log(info)
   return (
     < Layout >
     <SEO title="Home" />
-    <TodosLength data={info.todos} />
+    <TodosLength data={info.todos } />
     <TodoList data={info.todos} />
     <BooksList data={info.books} />
     <GoalsList />

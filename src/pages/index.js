@@ -44,13 +44,12 @@ export const data =   graphql`
 `;
 
 export default ({ data }) => {
-  const [info, setData] = useState(data);
   return (
     < Layout >
     <SEO title="Home" />
-    <TodosLength data={info.todos } />
-    <TodoList data={info.todos} />
-    <BooksList data={info.books} />
+    <TodosLength data={data.todos } />
+    <TodoList data={data.todos} />
+    <BooksList data={data.books} />
     <GoalsList />
     </Layout >
     )

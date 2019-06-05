@@ -3,7 +3,6 @@ import { useStaticQuery } from 'gatsby';
 
 
 export function SingleBook (props) {
-  console.log(props.node);
   return ( 
   <li >
     <input type='checkbox' disabled defaultChecked={props.node.frontmatter.done} />
@@ -12,6 +11,18 @@ export function SingleBook (props) {
   </li>
   )
 }
+const topicsList = [];
+
+function topics(data) {
+  // console.log(data.allMarkdownRemark.edges);
+  data.allMarkdownRemark.edges.map(({ node }, index) => {
+    // console.log(node);
+    topicsList.push(node.frontmatter.topic);
+    return topicsList;
+
+  })
+return ("hi")
+};
 
 export default ({children}) => {
   const data = useStaticQuery(
@@ -32,15 +43,12 @@ export default ({children}) => {
       }
     }
   `)
-  console.log(data)
+  // console.log(data)
 
-  // function topics(data) {
-  //   data.allMarkdownRemark.edges.map(({node}, index) => (
-  //   node.frontmatter.topic
-  //   ))
-  return (hi)
-  };
-    console.log(topics);
+
+
+  topics(data);
+    console.log(topicsList);
   
     return (
     <div>

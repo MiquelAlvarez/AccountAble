@@ -5,7 +5,7 @@ import SEO from "../components/seo"
 import Layout from '../components/layout'
 import '../styles/layout.scss';
 
-import GoalsList from '../components/goalsList';
+import GoalsList from '../components/GoalsList';
 
 const GoalsPage = () => {
     return (

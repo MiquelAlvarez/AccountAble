@@ -5,7 +5,7 @@ import SEO from "../components/seo"
 import Layout from '../components/layout'
 import '../styles/layout.scss';
 
-import BooksList from '../components/booksList';
+import BooksList from '../components/BooksList';
 
 const BooksPage = () => {
     return (

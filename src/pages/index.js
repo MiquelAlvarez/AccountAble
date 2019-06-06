@@ -5,9 +5,9 @@ import { graphql } from 'gatsby';
 
 import Layout from "../components/layout"
 import TodoList from '../components/todoList'
-import { TodosLength, Todos } from '../components/todoList'
-import { Books } from '../components/booksList'
-import { Goals } from '../components/goalsList'
+import { TodosLength, Todos } from '../components/TodoList'
+import { Books } from '../components/BooksList'
+import { Goals } from '../components/GoalsList'
 // import Image from "../components/image"
 import SEO from "../components/seo"
 // import netlifyIdentity from 'netlify-identity-widget';

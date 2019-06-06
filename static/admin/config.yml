@@ -15,7 +15,7 @@ collections:
      - { name: date, label: Date, widget: date }
      - { name: title, label: Title, widget: string }
      - { name: done, label: Done, widget: boolean, default: false, required: false }
-     - { name: Goal, label: Goal, widget: relation, collection: goals, searchFields: [goal], valueField: goal, displayFields: [Goal]}
+     - { name: Goal, label: Goal, widget: relation, collection: goals, searchFields: [Goal], valueField: goal, displayFields: [Goal], required: false}
      
   - name: books
     label: books
@@ -27,7 +27,7 @@ collections:
       - { name: topic, label: Topic, widget: select, options: ['design', 'ba', 'tech', 'productivity', 'creativity'] }
       - { name: description , label: Description, widget: text }
       - { name: read, label: Read, widget: boolean, default: false, required: false }
-      - { name: Goal, label: Goal, widget: relation, collection: goals, searchFields: [goal], valueField: goal, displayFields: [Goal]}
+      - { name: Goal, label: Goal, widget: relation, collection: goals, searchFields: [title], valueField: title, displayFields: [title]}
   
   - name: goals
     label: goals

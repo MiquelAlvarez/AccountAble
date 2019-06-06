@@ -1,0 +1,21 @@
+li {
+    height: auto;
+}
+
+.book {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+    height: auto;
+    align-items: stretch;
+}
+
+.bookInfo {
+    font-size:0.9em;
+    line-height:1em;
+    font-style: italic;
+    vertical-align: middle;
+}
+.bookFooter{grid-column: span 2 / auto;}
+
+.bookTitle, .bookDescription{grid-row: span 3 / auto;}

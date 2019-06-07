@@ -4,7 +4,7 @@ import { graphql } from 'gatsby';
 // import { Link } from "gatsby"
 
 import Layout from "../components/layout"
-import TodoList from '../components/todoList'
+import TodoList from '../components/TodoList'
 import { TodosLength, Todos } from '../components/TodoList'
 import { Books } from '../components/BooksList'
 import { Goals } from '../components/GoalsList'

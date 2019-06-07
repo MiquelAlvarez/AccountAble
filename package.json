@@ -23,6 +23,7 @@
     "gatsby-source-filesystem": "^2.0.37",
     "gatsby-transformer-remark": "^2.3.12",
     "gatsby-transformer-sharp": "^2.1.19",
+    "moment": "^2.24.0",
     "netlify-cms": "^2.9.1",
     "netlify-cms-app": "^2.9.1",
     "netlify-identity-widget": "^1.5.4",
@@ -31,7 +32,9 @@
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-helmet": "^5.2.1",
-    "react-icons": "^3.7.0"
+    "react-icons": "^3.7.0",
+    "react-moment": "^0.9.2",
+    "react-progressbar.js": "git+https://github.com/kimmobrunfeldt/react-progressbar.js.git"
   },
   "devDependencies": {
     "prettier": "^1.17.1"

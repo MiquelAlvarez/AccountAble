@@ -38,7 +38,7 @@ export function SingleGoal (props) {
 export default ({children}) => {
   const data = useStaticQuery(
     graphql`
-    query goals {
+    query Goals {
       allMarkdownRemark(filter: {collection: {eq: "goals"}}) {
         edges {
           node {

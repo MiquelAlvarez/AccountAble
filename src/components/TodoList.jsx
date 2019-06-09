@@ -2,6 +2,7 @@ import React from 'react';
 import '../styles/todos.scss';
 import { useStaticQuery } from 'gatsby';
 import { graphql } from 'gatsby';
+import {UID} from 'react-uid';
 
 export function Todos ({data}) {
   console.log("this is data", data);
@@ -17,10 +18,14 @@ export function Todos ({data}) {
 export function SingleTodo (props) {
   console.log(props.node);
   return ( 
-  <li >
-    <input type='checkbox' disabled defaultChecked={props.node.frontmatter.done} />
-    {props.node.frontmatter.title}
-  </li>
+    <UID>
+      {id => (
+        <li >
+          <input id={id} type='checkbox' disabled defaultChecked={props.node.frontmatter.done} />
+          <label htmlFor={id}> {props.node.frontmatter.title}</label>
+        </li>
+      )}
+    </UID>
   )
 }
 

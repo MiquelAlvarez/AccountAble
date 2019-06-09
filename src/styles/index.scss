@@ -12,3 +12,13 @@ main {
     font-size:0.8em;
     margin: 1em;
 }
+
+input[type = "checkbox"]:checked {
+    display:none;
+}
+
+input[type = "checkbox"]:checked + label {
+    text-decoration: line-through;
+    color: grey;
+    font-style: italic;
+}

@@ -14,6 +14,7 @@ import SEO from "../components/seo"
 import Moment from 'react-moment';
 import moment from 'moment';
 import ProgressBar from 'react-progressbar.js';
+import { IdentityContextProvider } from 'react-netlify-identity';
 
 import '../styles/main.scss'
 import '../styles/index.scss'
@@ -82,7 +83,10 @@ const containerStyle = {
 }
   
 export default ({ data }) => {
+  const url = 'https://brave-payne-aef5e5.netlify.com'; // supply the url of your Netlify site instance. VERY IMPORTANT
+
   return (
+    <IdentityContextProvider url={url}>
     < Layout >
       <SEO title="Home" />
       <div className='cover-content'>
@@ -99,5 +103,7 @@ export default ({ data }) => {
              {/* <Goals data={data.goals} /> */}
       </div>
     </Layout >
+    </IdentityContextProvider>
+
   )
 }

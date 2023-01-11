@@ -21,7 +21,7 @@
     "gatsby-plugin-sharp": "^2.1.1",
     "gatsby-remark-source-name": "^1.0.0",
     "gatsby-source-filesystem": "^2.0.37",
-    "gatsby-transformer-remark": "^2.3.12",
+    "gatsby-transformer-remark": "^5.25.1",
     "gatsby-transformer-sharp": "^2.1.19",
     "moment": "^2.24.0",
     "netlify-cms": "^2.9.1",
